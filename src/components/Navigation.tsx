@@ -17,13 +17,13 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-card/95 backdrop-blur-sm border-b border-border shadow-soft sticky top-0 z-50">
+    <nav className="bg-card/95 backdrop-blur-sm border-b border-border shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 rounded-full bg-rainbow-gradient animate-rainbow-shift bg-[length:200%_200%]" />
-            <span className="text-xl font-bold bg-rainbow-gradient bg-clip-text text-transparent animate-rainbow-shift bg-[length:200%_200%]">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-400 to-pink-400" />
+            <span className="text-xl font-bold text-primary">
               Arco-Íris Mapa
             </span>
           </Link>
@@ -36,8 +36,8 @@ const Navigation = () => {
                 asChild
                 variant={isActive(path) ? "default" : "ghost"}
                 className={`
-                  transition-all duration-200 hover:shadow-glow
-                  ${isActive(path) ? 'bg-primary text-primary-foreground shadow-glow' : ''}
+                  transition-all duration-200
+                  ${isActive(path) ? 'bg-primary text-primary-foreground' : ''}
                 `}
               >
                 <Link to={path} className="flex items-center space-x-2">
@@ -63,7 +63,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-card/95 backdrop-blur-sm border-t border-border animate-fade-in">
+          <div className="md:hidden bg-card/95 backdrop-blur-sm border-t border-border">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map(({ path, label, icon: Icon }) => (
                 <Button

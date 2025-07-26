@@ -43,7 +43,7 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-accent/60" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white animate-fade-in">
+          <div className="text-center text-white">
             <h1 className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
               Arco-Íris Mapa
             </h1>
@@ -51,7 +51,7 @@ const Index = () => {
               Descubra espaços seguros e acolhedores para a comunidade LGBTQIA+
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-glow">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90">
                 <MapPin className="mr-2 h-5 w-5" />
                 Explorar Mapa
               </Button>
@@ -69,21 +69,21 @@ const Index = () => {
       {/* Stats Section */}
       <div className="bg-card/95 backdrop-blur-sm border-b border-border py-6">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center animate-fade-in">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div>
               <div className="text-3xl font-bold text-primary">{stats.total}</div>
               <div className="text-sm text-muted-foreground">Locais Mapeados</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-love-pink">{stats.lgbtqOwned}</div>
+              <div className="text-3xl font-bold text-primary">{stats.lgbtqOwned}</div>
               <div className="text-sm text-muted-foreground">LGBTQIA+ Owned</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-safe-green">{stats.safe}</div>
+              <div className="text-3xl font-bold text-green-600">{stats.safe}</div>
               <div className="text-sm text-muted-foreground">Espaços Seguros</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-sky-blue">{stats.categories}</div>
+              <div className="text-3xl font-bold text-blue-600">{stats.categories}</div>
               <div className="text-sm text-muted-foreground">Categorias</div>
             </div>
           </div>
@@ -105,7 +105,7 @@ const Index = () => {
             />
 
             {/* Results Summary */}
-            <Card className="bg-card/95 backdrop-blur-sm shadow-soft">
+            <Card className="bg-card/95 backdrop-blur-sm shadow-lg">
               <CardHeader className="pb-3">
                 <CardTitle className="text-lg flex items-center">
                   <MapPin className="mr-2 h-5 w-5 text-primary" />
@@ -165,7 +165,7 @@ const Index = () => {
 
           {/* Map */}
           <div className="flex-1">
-            <Card className="overflow-hidden shadow-soft">
+            <Card className="overflow-hidden shadow-lg">
               <CardHeader className="pb-3">
                 <CardTitle className="flex items-center justify-between">
                   <span className="flex items-center">
@@ -191,8 +191,8 @@ const Index = () => {
         </div>
 
         {/* Community Section */}
-        <div className="mt-12 text-center animate-fade-in">
-          <h2 className="text-3xl font-bold mb-4 bg-rainbow-gradient bg-clip-text text-transparent animate-rainbow-shift bg-[length:200%_200%]">
+        <div className="mt-12 text-center">
+          <h2 className="text-3xl font-bold mb-4 text-primary">
             Construindo Juntes uma Comunidade Mais Segura
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -200,10 +200,10 @@ const Index = () => {
           </p>
           
           <div className="grid gap-6 md:grid-cols-3 max-w-4xl mx-auto">
-            <Card className="text-center hover:shadow-glow transition-all duration-300">
+            <Card className="text-center hover:shadow-lg transition-all duration-300">
               <CardContent className="pt-6">
-                <div className="w-12 h-12 bg-love-pink/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="h-6 w-6 text-love-pink" />
+                <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Heart className="h-6 w-6 text-pink-600" />
                 </div>
                 <h3 className="font-semibold mb-2">Acolhimento</h3>
                 <p className="text-sm text-muted-foreground">
@@ -212,10 +212,10 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-glow transition-all duration-300">
+            <Card className="text-center hover:shadow-lg transition-all duration-300">
               <CardContent className="pt-6">
-                <div className="w-12 h-12 bg-safe-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="h-6 w-6 text-safe-green" />
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="h-6 w-6 text-green-600" />
                 </div>
                 <h3 className="font-semibold mb-2">Segurança</h3>
                 <p className="text-sm text-muted-foreground">
@@ -224,10 +224,10 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-glow transition-all duration-300">
+            <Card className="text-center hover:shadow-lg transition-all duration-300">
               <CardContent className="pt-6">
-                <div className="w-12 h-12 bg-sky-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-6 w-6 text-sky-blue" />
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="font-semibold mb-2">Comunidade</h3>
                 <p className="text-sm text-muted-foreground">
