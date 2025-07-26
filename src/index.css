@@ -50,8 +50,8 @@ All colors MUST be HSL.
     --love-pink: 330 75% 70%;
     --pride-purple: 267 85% 65%;
     --sky-blue: 200 80% 65%;
-    --soft-shadow: 0 4px 20px -4px hsl(267 85% 65% / 0.15);
-    --glow-effect: 0 0 30px hsl(267 85% 65% / 0.3);
+    --soft-shadow: 0 4px 20px -4px hsl(267, 85%, 65%, 0.15);
+    --glow-effect: 0 0 30px hsl(267, 85%, 65%, 0.3);
 
     --radius: 0.5rem;
 
